@@ -1,6 +1,7 @@
 import tweepy
 from config import twitter_auth
 import time
+from send_message import sendDM
 
 
 def findMentionAndSendDM(api):
@@ -26,20 +27,8 @@ def findMentionAndSendDM(api):
             print("Recipent ID : " + recipent_id)
             print(match_value + " not found thus sending tweets to dm")
             print(status)
-            event = {
-                "event": {
-                    "type": "message_create",
-                    "message_create": {
-                        "target": {
-                            "recipient_id": recipent_id
-                        },
-                        "message_data": {
-                            "text": status + "\n\n >> Tweet Saved! \n\nClick on the link above to go to Root Tweet \nThankyou for using our Service"
-                        }
-                    }
-                }
-            }
-            api.send_direct_message_new(event)
+            message_text = status + "\n\n >> Tweet Saved! \n\nClick on the link above to go to Root Tweet \nThankyou for using our Service"
+            sendDM(recipent_id,message_text)
             with open('./files/inReplyStatusId.txt', 'a') as idFile:
                 idFile.writelines("\n"+match_value)
                 idFile.close()
