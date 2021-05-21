@@ -16,10 +16,11 @@ def findMentionAndSendDM(api):
         match_value = str(inReply_to_status_id)
         if inReply_to_status_id != None:
             status = api.get_status(inReply_to_status_id).text
-            with open('./files/inReplyStatusId.txt') as file:
-                idFileData = file.readlines()
+            with open('./files/inReplyStatusId.txt','r') as file:
+                file.seek(0)
+                idFileData = file.read().strip()
                 boolean = match_value not in idFileData
-                file.close()
+
         else:
             status = "No Text in Tweet. Plese Reply to any valid tweet"
             boolean = False
@@ -29,9 +30,8 @@ def findMentionAndSendDM(api):
             print(status)
             message_text = status + "\n\n >> Tweet Saved! \n\nClick on the link above to go to Root Tweet \nThankyou for using our Service"
             sendDM(recipent_id,message_text)
-            with open('./files/inReplyStatusId.txt', 'a') as idFile:
-                idFile.writelines("\n"+match_value)
-                idFile.close()
+            with open('./files/inReplyStatusId.txt','a') as idFile:
+                idFile.write("\n"+match_value)
 
 
 def main():
