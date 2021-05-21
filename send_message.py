@@ -1,11 +1,13 @@
 from TwitterAPI import TwitterAPI
 import json
-import devcredentials
+import os
 
-api = TwitterAPI(devcredentials.API_Key, 
-                 devcredentials.API_Secret_Key,
-                 devcredentials.Acess_Token,
-                 devcredentials.Acess_Token_Secret)
+consumer_key = os.getenv("CONSUMER_KEY")
+consumer_secret = os.getenv("CONSUMER_SECRET")
+access_token = os.getenv("ACCESS_TOKEN")
+access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
+
+api = TwitterAPI(consumer_key, consumer_secret,access_token,access_token_secret)
 
 
 
