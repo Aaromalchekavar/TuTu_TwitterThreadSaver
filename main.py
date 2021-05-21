@@ -1,9 +1,6 @@
 import tweepy
 from config import twitter_auth
 
-idFile = open('./files/inReplyStatusId.txt', 'a')
-file = open('./files/inReplyStatusId.txt')
-idFileData = file.readlines()
 
 auth = twitter_auth()
 api = tweepy.API(auth)
@@ -21,7 +18,10 @@ for mention in mentions:
     match_value = str(inReply_to_status_id)
     if inReply_to_status_id != None:
         status = api.get_status(inReply_to_status_id).text
-        boolean = match_value not in idFileData
+        with open('./files/inReplyStatusId.txt') as file:
+            idFileData = file.readlines()
+            boolean = match_value not in idFileData
+            file.close()
     else:
         status = "No Text in Tweet. Plese Reply to any valid tweet"
         boolean = False
@@ -29,22 +29,22 @@ for mention in mentions:
         print(match_value + " not found thus sending tweets to dm")
         print(status)
         event = {
-        "event": {
-            "type": "message_create",
-            "message_create": {
-            "target": {
-                "recipient_id": recipent_id
-            },
-            "message_data": {
-                "text": status
+            "event": {
+                "type": "message_create",
+                "message_create": {
+                    "target": {
+                        "recipient_id": recipent_id
+                    },
+                    "message_data": {
+                        "text": status
+                    }
+                }
             }
-            }
-        }
         }
         api.send_direct_message_new(event)
-        idFile.writelines("\n"+match_value)
-
-
+        with open('./files/inReplyStatusId.txt', 'a') as idFile:
+            idFile.writelines("\n"+match_value)
+            idFile.close()
 
 
 
