@@ -15,7 +15,7 @@ def findMentionAndSendDM(api):
 
         match_value = str(inReply_to_status_id)
         if inReply_to_status_id != None:
-            status = api.get_status(inReply_to_status_id).text
+            status = api.get_status(inReply_to_status_id)
             with open('./files/inReplyStatusId.txt','r') as file:
                 file.seek(0)
                 idFileData = file.read().strip()
@@ -28,7 +28,7 @@ def findMentionAndSendDM(api):
             print("Recipent ID : " + recipent_id)
             print(match_value + " not found thus sending tweets to dm")
             print(status)
-            message_text ="🤖 TuTu Thread Saver v1 🤖 "+"\n\nTweet: "+ "\n"+status + "\n\n 🤖 Thread Saved! \n\nClick the given link  >> "+" https://twitter.com/"+status.user.screen_name+"/status/"+status.id_str +" << to go to Root Thread \n\nThankyou for using our Service 🤘"
+            message_text ="🤖 TuTu Thread Saver v1 🤖 "+"\n\nTweet: "+ "\n"+status.text + "\n\n 🤖 Thread Saved! \n\nClick the given link  >> "+" https://twitter.com/"+status.user.screen_name+"/status/"+status.id_str +" << to go to Root Thread \n\nThankyou for using our Service 🤘"
             sendDM(recipent_id,message_text)
             with open('./files/inReplyStatusId.txt','a') as idFile:
                 idFile.write("\n"+match_value)
