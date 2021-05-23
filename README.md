@@ -4,11 +4,11 @@
 
 ### \>\> Login to [Twitter](https://www.twiiter.com/)
 
-### \>\> ⚠️ Follow [Bot](https://twitter.com/ChekavarAaromal) On [Twitter](https://www.twiiter.com/)
+### \>\> ⚠️ Follow [Bot](https://twitter.com/binilchengankal) On [Twitter](https://www.twiiter.com/)
 
 !!! Thread Saver Wont Work Unless You Follow Bot !!!
 
-### \>\> Reply under any Tweet by mentioning Bot ( @ChekavarAaromal )
+### \>\> Reply under any Tweet by mentioning Bot ( @binilchengankal )
 
 ### \>\> Wait for a minute
 
