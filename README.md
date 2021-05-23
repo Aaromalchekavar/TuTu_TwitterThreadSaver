@@ -4,7 +4,7 @@
 
 ### \>\> Login to [Twitter](https://www.twiiter.com/)
 
-### \>\> Follow [Bot](https://twitter.com/ChekavarAaromal) On [Twitter](https://www.twiiter.com/)
+### \>\> ⚠️ Follow [Bot](https://twitter.com/ChekavarAaromal) On [Twitter](https://www.twiiter.com/)
 
 !!! Thread Saver Wont Work Unless You Follow Bot !!!
 
@@ -57,5 +57,14 @@ $ export CONSUMER_KEY="<Your Consumer Key>"
 $ export CONSUMER_SECRET="<Your Consumer Secret Key>"
 $ export ACCESS_TOKEN="<Your Access Tocken>"
 $ export ACCESS_TOKEN_SECRET="<Your Access Tocken Secret>"
+
+```
+# Run main.py
+```
+$ python main.py
+
+# or
+
+$ python3 main.py
 
 ```
