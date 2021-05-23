@@ -1,3 +1,37 @@
+u![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)
+
+# TuTu Twitter ThreadSaver
+Helps to Save Twiiter Thread by Tagging/Mentioning us. Under any Tweet you want to save, reply by mentioning our bot @binilchengankal. Wait for a minute for the reply from bot. A reply will be sent as direct message (⚠️ bot won't run unless you follow bot - As Twiiter policy is restricting bot to do so). Kindly make sure to follow bot before mentioning/tagging us.Thank you
+
+## Team members
+
+1. [Abhijith KJ](https://github.com/abhijith666)
+2. [Akhil Shalil](https://github.com/akku127)
+
+## Team Id
+
+BFH/recqA2DMkbksFm0hb/2021
+
+## Link to product walkthrough
+
+[Link to Video](https://www.loom.com/share/0ccfe2e34dc94da1ab6bf09e1801a5e3)
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/0ccfe2e34dc94da1ab6bf09e1801a5e3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+## How it Works ?
+
+Bot uses tweepy to get the tweets where the bot is Tagged/Mentioned.
+From the it collect recipent ID, Tweet ID, Tweet Text and URL.Bot uses twitter API to send direct Message to the Recipent.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/de6860cf4bbc4f0db0848d9f6e0285ad" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+## Libraries used
+
+TwitterAPI
+tweepy
+
+## How to configure
+
 # How To Install? & How To Use? :
 
 ## To Test Bot without Installing
@@ -59,7 +93,7 @@ $ export ACCESS_TOKEN="<Your Access Tocken>"
 $ export ACCESS_TOKEN_SECRET="<Your Access Tocken Secret>"
 
 ```
-# Run main.py
+# How to Run
 ```
 $ python main.py
 
